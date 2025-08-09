@@ -35,10 +35,6 @@ model.fit(df)
 future = model.make_future_dataframe(periods=forecast_period)
 forecast = model.predict(future)
 
-# Show forecast data
-st.write("### Forecast Results")
-st.dataframe(forecast.tail())
-
 # Plot forecast
 st.write("### Forecast Plot")
 fig1 = model.plot(forecast)
